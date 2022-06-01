@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .change { background-color: #0000FF; }
+    </style>
+   
+    <style >
+        table{
+            margin: auto;
+        }
+        button{
+            margin: 0 auto;
+            display: block;
+            height: 50px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+
+<body>
+    
+
+ </head>
+    <body> 
+
+        <form>
+            <button onclick="on()">Start</button>
+        </form>
+
+    </body>
+
+        <table border="1" cellspacing="2" cellpadding="50">
+        
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+          <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody> <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody> <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody> <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+    </table>
+
+    <script>
+        var stop = true;
+        function reverse(){
+            stop=!stop;
+            
+        }
+        function on(){
+        reverse();
+         
+        let tds = document.querySelectorAll('td');
+        tds.forEach(function(item)
+        {
+            item.onclick = function()
+            {
+                if (stop){
+                this.classList.toggle('change');
+            }
+            };
+        });}
+        on();
+
+    
+    </script>
+
+</body>
+
+</html>
