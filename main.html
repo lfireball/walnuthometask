@@ -19,20 +19,13 @@
     </style>
 </head>
 
-
-<body>
-    
-
- </head>
-    <body> 
+ <body> 
 
         <form>
-            <button onclick="on()">Start</button>
+            <button onclick="reverse()">Start</button>
         </form>
-
-    </body>
-
-        <table border="1" cellspacing="2" cellpadding="50">
+    
+     <table border="1" cellspacing="2" cellpadding="50">
         
         <tbody>
             <tr>
@@ -43,7 +36,7 @@
                 <td></td>
             </tr>
         </tbody>
-          <tbody>
+        <tbody>
             <tr>
                 <td></td>
                 <td></td>
@@ -51,7 +44,8 @@
                 <td></td>
                 <td></td>
             </tr>
-        </tbody> <tbody>
+        </tbody> 
+        <tbody>
             <tr>
                 <td></td>
                 <td></td>
@@ -59,7 +53,8 @@
                 <td></td>
                 <td></td>
             </tr>
-        </tbody> <tbody>
+        </tbody>
+        <tbody>
             <tr>
                 <td></td>
                 <td></td>
@@ -67,7 +62,8 @@
                 <td></td>
                 <td></td>
             </tr>
-        </tbody> <tbody>
+        </tbody>
+        <tbody>
             <tr>
                 <td></td>
                 <td></td>
@@ -79,29 +75,20 @@
     </table>
 
     <script>
-        var stop = true;
+        var stop = false;
         function reverse(){
             stop=!stop;
-            
         }
-        function on(){
-        reverse();
-         
         let tds = document.querySelectorAll('td');
         tds.forEach(function(item)
-        {
-            item.onclick = function()
             {
-                if (stop){
-                this.classList.toggle('change');
-            }
-            };
-        });}
-        on();
-
-    
+                item.onclick = function()
+                {
+                    if (stop){
+                    this.classList.toggle('change');
+                    }
+                }
+            });
     </script>
-
 </body>
-
 </html>
